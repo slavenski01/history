@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HistoryProject</string>
+
+    <!-- Боковое меню -->
+    <string name="history_people">Правители</string>
+    <string name="history_terms">Термины</string>
+    <string name="history_years">Года</string>
+
+    <!-- PeopleFragment -->
+    <string name="people_button_back">Назад</string>
+</resources>
