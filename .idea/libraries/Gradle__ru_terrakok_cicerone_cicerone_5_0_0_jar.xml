@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: ru.terrakok.cicerone:cicerone:5.0.0@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ru.terrakok.cicerone/cicerone/5.0.0/2d47de1ccff06cb759417a925c41f6ec3be4c16e/cicerone-5.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ru.terrakok.cicerone/cicerone/5.0.0/8060a1bf6e34ed0e0a9cc90800f04f7b35dd0dd8/cicerone-5.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ru.terrakok.cicerone/cicerone/5.0.0/b34c88473152054c264f22da278007d9dc578576/cicerone-5.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
