@@ -1,12 +1,10 @@
 package com.example.historyproject
 
 import androidx.multidex.MultiDexApplication
-import com.example.historyproject.di.components.AppComponent
-import com.example.historyproject.di.components.DaggerAppComponent
-import com.example.historyproject.di.components.MainSubcomponent
-import com.example.historyproject.di.components.PeopleSubcomponent
+import com.example.historyproject.di.components.*
 import com.example.historyproject.di.modules.MainModule
 import com.example.historyproject.di.modules.PeopleModule
+import com.example.historyproject.di.modules.TermsModule
 
 class App : MultiDexApplication() {
 
@@ -23,6 +21,7 @@ class App : MultiDexApplication() {
 
         private var mainSubcomponent: MainSubcomponent? = null
         private var peopleSubcomponent: PeopleSubcomponent? = null
+        private var termSubcomponent: TermsSubcomponent? = null
 
         fun removeMainSubcomponent() {
             mainSubcomponent = null
@@ -44,6 +43,17 @@ class App : MultiDexApplication() {
                 PeopleModule()
             )
             return peopleSubcomponent!!
+        }
+
+        fun removeTermsSubcomponent() {
+            termSubcomponent = null
+        }
+
+        fun addTermsSubcomponent(): TermsSubcomponent {
+            if (termSubcomponent == null) termSubcomponent = appComponent.addTermsSubcomponent(
+                TermsModule()
+            )
+            return termSubcomponent!!
         }
     }
 }
