@@ -1,10 +1,7 @@
 package com.example.historyproject.di.components
 
 import android.content.Context
-import com.example.historyproject.di.modules.MainModule
-import com.example.historyproject.di.modules.NavigationModule
-import com.example.historyproject.di.modules.PeopleModule
-import com.example.historyproject.di.modules.TermsModule
+import com.example.historyproject.di.modules.*
 import com.example.historyproject.ui.AppActivity
 import dagger.BindsInstance
 import dagger.Component
@@ -21,6 +18,7 @@ interface AppComponent {
     fun addMainSubcomponent(mainModule: MainModule): MainSubcomponent
     fun addPeopleSubcomponent(peopleModule: PeopleModule): PeopleSubcomponent
     fun addTermsSubcomponent(termsModule: TermsModule): TermsSubcomponent
+    fun addYearsSubcomponent(yearsModule: YearsModule): YearsSubcomponent
 
     @Component.Builder
     interface Builder {

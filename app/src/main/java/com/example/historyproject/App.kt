@@ -5,6 +5,7 @@ import com.example.historyproject.di.components.*
 import com.example.historyproject.di.modules.MainModule
 import com.example.historyproject.di.modules.PeopleModule
 import com.example.historyproject.di.modules.TermsModule
+import com.example.historyproject.di.modules.YearsModule
 
 class App : MultiDexApplication() {
 
@@ -22,6 +23,7 @@ class App : MultiDexApplication() {
         private var mainSubcomponent: MainSubcomponent? = null
         private var peopleSubcomponent: PeopleSubcomponent? = null
         private var termSubcomponent: TermsSubcomponent? = null
+        private var yearsSubcomponent: YearsSubcomponent? = null
 
         fun removeMainSubcomponent() {
             mainSubcomponent = null
@@ -54,6 +56,17 @@ class App : MultiDexApplication() {
                 TermsModule()
             )
             return termSubcomponent!!
+        }
+
+        fun removeYearsSubcomponent() {
+            yearsSubcomponent = null
+        }
+
+        fun addYearsSubcomponent(): YearsSubcomponent {
+            if (yearsSubcomponent == null) yearsSubcomponent = appComponent.addYearsSubcomponent(
+                YearsModule()
+            )
+            return yearsSubcomponent!!
         }
     }
 }

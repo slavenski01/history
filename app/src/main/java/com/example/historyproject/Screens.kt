@@ -5,6 +5,7 @@ import com.example.historyproject.entity.People
 import com.example.historyproject.ui.main.MainFragment
 import com.example.historyproject.ui.people.PeopleFragment
 import com.example.historyproject.ui.terms.TermsFragment
+import com.example.historyproject.ui.years.YearsFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 
 object Screens {
@@ -19,5 +20,9 @@ object Screens {
 
     object TermsScreen : SupportAppScreen() {
         override fun getFragment(): Fragment = TermsFragment()
+    }
+
+    object YearsScreen : SupportAppScreen() {
+        override fun getFragment(): Fragment = YearsFragment()
     }
 }

@@ -64,6 +64,7 @@ class AppActivity : AppCompatActivity() {
             .withActivity(this)
             .withToolbar(toolbar)
             .addDrawerItems(
+                //добавляем список итемов меню
                 PrimaryDrawerItem().withName(R.string.history_people),
                 PrimaryDrawerItem().withName(R.string.history_terms),
                 PrimaryDrawerItem().withName(R.string.history_years)
@@ -74,6 +75,7 @@ class AppActivity : AppCompatActivity() {
                     position: Int,
                     drawerItem: IDrawerItem<*>
                 ): Boolean {
+                    //при клике на определенную позицию в списке меню, заменяем фрагмент
                     when (position) {
                         0 -> {
                             navigator.applyCommands(arrayOf(Replace(Screens.MainScreen)))
@@ -83,10 +85,15 @@ class AppActivity : AppCompatActivity() {
                             navigator.applyCommands(arrayOf(Replace(Screens.TermsScreen)))
                             toolbar.title = getString(R.string.history_terms)
                         }
+                        2 -> {
+                            navigator.applyCommands(arrayOf(Replace(Screens.YearsScreen)))
+                            toolbar.title = getString(R.string.history_years)
+                        }
                     }
                     return false
                 }
             })
+            //При активации бокового меню убираем клавиатуру
             .withOnDrawerListener(object : Drawer.OnDrawerListener {
                 override fun onDrawerClosed(drawerView: View) {}
                 override fun onDrawerOpened(drawerView: View) {
